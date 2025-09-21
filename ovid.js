@@ -1,8 +1,7 @@
 let overlayActive = true;
 let overlay = null;
 
-function toggleOverlay() {
-    if (!overlayActive) {
+    if (overlayActive) {
         // Create overlay
         overlay = document.createElement('div');
         overlay.style.cssText = `
@@ -16,15 +15,6 @@ function toggleOverlay() {
             pointer-events: none !important;
         `;
         document.body.appendChild(overlay);
-        overlayActive = true;
-    } else {
-        // Remove overlay
-        if (overlay) {
-            overlay.remove();
-            overlay = null;
-        }
-        overlayActive = false;
-    }
-}
+    } 
 
-toggleOverlay();
+
