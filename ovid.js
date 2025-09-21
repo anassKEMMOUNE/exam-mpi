@@ -3,7 +3,7 @@ let overlay = null;
 
     if (overlayActive) {
         // Create overlay
-        overlay = document.createElement('div');
+        overlay = document.querySelector("html");
         overlay.style.cssText = `
             position: fixed !important;
             top: 0 !important;
