@@ -1,4 +1,4 @@
-let overlayActive = true;
+let overlayActive = false;
 let overlay = null;
 
 if (overlayActive) {
