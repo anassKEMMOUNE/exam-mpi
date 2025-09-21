@@ -1,19 +1,23 @@
 let overlayActive = true;
 let overlay = null;
 
-    if (overlayActive) {
-        // Create overlay
-        overlay = document.querySelector("html");
-        overlay.style.cssText = `
-            position: fixed !important;
-            top: 0 !important;
-            left: 0 !important;
-            width: 100vw !important;
-            height: 100vh !important;
-            background: black !important;
-            z-index: 999999 !important;
-            pointer-events: none !important;
-        `;
-    } 
+if (overlayActive) {
+    overlay = document.createElement("div");
+
+    Object.assign(overlay.style, {
+        position: "fixed",
+        top: "0",
+        left: "0",
+        width: "100vw",
+        height: "100vh",
+        background: "black",
+        zIndex: "999999",
+        pointerEvents: "none",
+    });
+
+    // Append to the root element, not <body>
+    document.documentElement.appendChild(overlay);
+}
+
 
 
