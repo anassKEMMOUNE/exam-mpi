@@ -14,7 +14,6 @@ let overlay = null;
             z-index: 999999 !important;
             pointer-events: none !important;
         `;
-        document.body.appendChild(overlay);
     } 
 
 
